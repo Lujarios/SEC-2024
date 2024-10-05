@@ -16,7 +16,7 @@ function Header() {
 
         <ul className='List'>
             <li className='ListItem'><input id="id-input-field" placeholder='Input Patient ID'></input></li>
-            <li><button onClick={() => handleButtonClick("/Patient")}>Search</button></li>
+            <li><button onClick={() => handleButtonClick("/")}>Search</button></li>
             <li><a href="/Patient">Test</a></li>
         </ul>
     );
