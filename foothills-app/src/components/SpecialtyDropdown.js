@@ -1,9 +1,21 @@
 import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 
-const specialityDropdown = (props) => { //props should be the speciality
+const SpecialtyDropdown = (props) => { //props should be the speciality
+    const [doctorInformation, setDoctors] = useState();
+    
+    const fetchDoctorsBySpecialty = async (specialty) => {
+        try {
+          const response = await fetch(`http://localhost:3001/api/doctors/specialty/${specialty}`);
+          const doctorsData = await response.json();
+          setDoctors(doctorsData);
+        } catch (error) {
+          console.error('Error fetching doctors by specialty:', error);
+        }
+      };
+    
     const [isOpen, setIsOpen] = useState(false);
-    const doctorInformation = "SELECT * FROM DOCTORS WHERE SPECIALTY IS (input)"; //fill with SQL command about each doctor with given speciality
+    fetchDoctorsBySpecialty(props.specialty); //fill with SQL command about each doctor with given speciality
     const navigate = useNavigate();
 
     return(
@@ -36,4 +48,4 @@ const specialityDropdown = (props) => { //props should be the speciality
 };
 
 
-export default specialityDropdown;
+export default SpecialtyDropdown;
