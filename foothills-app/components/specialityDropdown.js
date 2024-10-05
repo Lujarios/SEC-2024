@@ -8,7 +8,7 @@ const specialityDropdown = (props) => { //props should be the speciality
     return(
         <div>
             <button onClick = {() => setIsOpen(!isOpen)}>
-                {props}
+                {props.name}
             </button>
             { isOpen && (
                 <div>
