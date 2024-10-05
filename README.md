@@ -1,6 +1,6 @@
 # Schulich Engineering Competition - Competitive Programming - 2024
 
-### Welcome to our submissions for the Competitive Programing division of SEC! :grin:
+### Welcome to our submission for the Competitive Programing division of SEC! :grin:
 
 ## <ins>**The Task:**</ins>
 Create a system to allow the Foothills Hospital to schedule patient appointments with doctors.
