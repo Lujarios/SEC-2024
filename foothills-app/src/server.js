@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const { Pool } = require('pg');
 const app = express();
-const port = 3002; // Port for the backend
+const port = 3001; // Port for the backend
 
 app.use(cors()); // Allow cross-origin requests
 app.use(express.json()); // For parsing application/json
@@ -109,10 +109,57 @@ app.post('/api/query', async (req, res) => {
 
 	try {
 		const result = await pool.query(query);
-		res.json(result.rows); // Return the query result rows
+		res.json(result.rows);
 	} catch (error) {
 		console.error('Error executing query:', error);
 		res.status(500).json({ error: 'Error executing query' });
+	}
+});
+
+// Get all patient IDs
+app.get('/api/patientIds', async (req, res) => {
+	try {
+		const result = await pool.query('SELECT patient_id FROM Patients');
+		res.json(result.rows);
+	} catch (err) {
+		console.error(err);
+		res.status(500).json({ error: 'Database error' });
+	}
+});
+
+// Get doctors by specialty
+app.get('/api/doctors/specialty/:specialty', async (req, res) => {
+	const { specialty } = req.params;
+	try {
+		const result = await pool.query('SELECT * FROM Doctors WHERE specialty = $1', [specialty]);
+		res.json(result.rows);
+	} catch (err) {
+		console.error(err);
+		res.status(500).json({ error: 'Database error' });
+	}
+});
+
+// Get doctor by doctor ID
+app.get('/api/doctors/:doctorId', async (req, res) => {
+	const { doctorId } = req.params;
+	try {
+		const result = await pool.query('SELECT * FROM Doctors WHERE doctor_id = $1', [doctorId]);
+		res.json(result.rows);
+	} catch (err) {
+		console.error(err);
+		res.status(500).json({ error: 'Database error' });
+	}
+});
+
+// Get patients by patient ID
+app.get('/api/patients/:patientId', async (req, res) => {
+	const { patientId } = req.params;
+	try {
+		const result = await pool.query('SELECT * FROM Patients WHERE patient_id = $1', [patientId]);
+		res.json(result.rows);
+	} catch (err) {
+		console.error(err);
+		res.status(500).json({ error: 'Database error' });
 	}
 });
 

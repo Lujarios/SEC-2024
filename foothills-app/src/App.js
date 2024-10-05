@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import Home from './components/Home';
 import Error from './components/Error';
 import Patient from './components/Patient';
+import Specialties from './Pages/Specialities';
 import './App.css';
 import React, { useEffect, useState } from 'react';
 
@@ -130,7 +131,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="Error" element={<Error />} />
           <Route path="Patient" element={<Patient />} />
-          <Route path="Specialists" element={<Patient />} />
+          <Route path="Specialties" element={<Specialties />} />
         </Route>
       </Routes>
     </Router>

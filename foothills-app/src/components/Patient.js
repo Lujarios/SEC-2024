@@ -18,7 +18,7 @@ function Patient() {
                 <p className="patientDataNumber" id="patientDataNumber"></p>
             </div>
             <p className="appointmentTitle">Appointments: </p>
-            <button onClick={() => handleButtonClick("/Specialists")}>Add appointment</button>
+            <button onClick={() => handleButtonClick("/Specialties")}>Add appointment</button>
         </div>
     );
 };

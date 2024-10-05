@@ -1,4 +1,3 @@
-import './Specialities.css';
 import React, { useState, useLocation, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 
@@ -14,6 +13,11 @@ function Doctor() {
     }, [location]);
 
     let doctor = ["SELECT * FROM Doctors WHERE doctor_id=(input)"]; //Doctor json from database
+    const bookAppointment = () => {
+        let date = startDate.toDateString();
+        let startTime = startDate.getHours();
+    }
+
 
     return(
         <div>
@@ -31,7 +35,7 @@ function Doctor() {
                 </li>
             </ul>
             <div>
-                <button onPress>Book Now</button>
+                <button onPress = {bookAppointment}>Book Now</button>
             </div>
         </div>
     );
