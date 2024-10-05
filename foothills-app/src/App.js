@@ -7,11 +7,11 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 
 function App() {
-  /*
+
   const [patients, setPatients] = useState([]);
   const [doctors, setDoctors] = useState([]);
   const [appointments, setAppointments] = useState([]);
-
+  /*
   // Fetch all patients
   const fetchPatients = async () => {
     try {
@@ -116,11 +116,11 @@ function App() {
 
   // Fetch data when the component mounts
   useEffect(() => {
-    fetchPatients();
-    fetchDoctors();
-    fetchAppointments();
+    //fetchPatients();
+    //fetchDoctors();
+    //fetchAppointments();
   }, []);
-*/
+
   return (
     <Router>
       <Routes>
