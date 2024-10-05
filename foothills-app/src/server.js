@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const { Pool } = require('pg');
 const app = express();
-const port = 3001; // Port for the backend
+const port = 3002; // Port for the backend
 
 app.use(cors()); // Allow cross-origin requests
 app.use(express.json()); // For parsing application/json

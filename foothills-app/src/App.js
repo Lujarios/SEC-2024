@@ -114,11 +114,11 @@ function App() {
     }
   };
 
-  // Fetch data when the component mounts
+  //Fetch data when the component mounts
   useEffect(() => {
     fetchPatients();
-    //fetchDoctors();
-    //fetchAppointments();
+    fetchDoctors();
+    fetchAppointments();
   }, []);
   console.log(patients);
 
@@ -127,7 +127,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/Patient" element={<Patient />} />
+          <Route path="Patient" element={<Patient />} />
+          <Route path="Specialists" element={<Patient />} />
         </Route>
       </Routes>
     </Router>
