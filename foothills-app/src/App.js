@@ -127,6 +127,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="Patient" element={<Patient />} />
+          <Route path="Specialists" element={<Patient />} />
         </Route>
       </Routes>
     </Router>
