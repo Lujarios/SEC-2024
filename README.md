@@ -66,6 +66,10 @@ npm start
 ```
 
 ## <ins>**How the application works:**</ins>
+![image](https://github.com/user-attachments/assets/6a278e26-53f8-4509-abd4-7c370d050fd8)
+
+![image](https://github.com/user-attachments/assets/c55ea03c-72db-4b92-8a27-1ca194487083)
+
 ![image](https://github.com/user-attachments/assets/42cfeab4-7101-4337-9e48-212bc919f0c4)
 
 The user can enter the user ID of a patient at the top.
