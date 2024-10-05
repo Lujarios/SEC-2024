@@ -10,9 +10,9 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const patientsData = await fetch('http://localhost:3001/api/patients').json(); // Update port here
-        const doctorsData = await fetch('http://localhost:3001/api/doctors').json();   // Update port here
-        const appointmentsData = await fetch('http://localhost:3001/api/appointments').json(); // Update port here
+        const patientsData = await (await fetch('http://localhost:3001/api/patients')).json(); // Update port here
+        const doctorsData = await (await fetch('http://localhost:3001/api/doctors')).json();   // Update port here
+        const appointmentsData = await (await fetch('http://localhost:3001/api/appointments')).json(); // Update port here
 
         setPatients(patientsData);
         setDoctors(doctorsData);

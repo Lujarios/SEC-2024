@@ -8,7 +8,7 @@ app.use(cors()); // Allow cross-origin requests
 app.use(express.json()); // For parsing application/json
 
 const pool = new Pool({
-	user: 'user',
+	user: 'postgres',
 	host: 'localhost',
 	database: 'Hospital (SEC)',
 	password: 'postgres',
