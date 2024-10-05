@@ -1,7 +1,7 @@
 // App.js
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
-
+import Home from './components/Home';
 import Patient from './components/Patient';
 import './App.css';
 import React, { useEffect, useState } from 'react';
@@ -125,6 +125,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
           <Route path="Patient" element={<Patient />} />
         </Route>
       </Routes>

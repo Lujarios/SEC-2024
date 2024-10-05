@@ -2,7 +2,7 @@ import React from 'react'
 
 function Patient() {
     return (
-        <h1>patient</h1>
+        <h1>Please input a patient ID</h1>
     );
 };
 
