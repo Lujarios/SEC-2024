@@ -103,6 +103,19 @@ app.post('/api/appointments', async (req, res) => {
 	}
 });
 
+// Allow the frontend to execute queries on the database
+app.post('/api/query', async (req, res) => {
+	const { query } = req.body;
+
+	try {
+		const result = await pool.query(query);
+		res.json(result.rows); // Return the query result rows
+	} catch (error) {
+		console.error('Error executing query:', error);
+		res.status(500).json({ error: 'Error executing query' });
+	}
+});
+
 // Start the server
 app.listen(port, () => {
 	console.log(`Server is running on http://localhost:${port}`);

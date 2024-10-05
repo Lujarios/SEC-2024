@@ -121,6 +121,7 @@ function App() {
     fetchDoctors();
     fetchAppointments();
   }, []);
+  console.log(patients);
 
   return (
     <Router>
