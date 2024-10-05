@@ -1,11 +1,16 @@
-.List {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
+.Header {
+    background-color: #484848;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
-.ListItem {
-    float: left;
+.id_input {
+    padding: 5px 8px;
+    margin: 8px;
+}
+
+.Title {
+    color: azure;
 }

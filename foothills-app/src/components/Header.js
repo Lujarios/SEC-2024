@@ -13,12 +13,11 @@ function Header() {
     }
     return (
 
-
-        <ul className='List'>
-            <li className='ListItem'><input id="id-input-field" placeholder='Input Patient ID'></input></li>
-            <li><button onClick={() => handleButtonClick("/")}>Search</button></li>
-            <li><a href="/Patient">Test</a></li>
-        </ul>
+        <div className='Header'>
+            <h2 className='Title'>Foothills Hospital</h2>
+            <input id="id-input-field" className="id_input" placeholder='Input Patient ID'></input>
+            <button onClick={() => handleButtonClick("/Patient")}>Search</button>
+        </div>
     );
 };
 
