@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './Book.css';
+import './Specialities.css';
 import React, { useState } from 'react';
 
 function Book() {
@@ -9,7 +9,7 @@ function Book() {
     );
 
   return (
-    <div className="Book">
+    <div className="Specialities">
       {speciality_dropdowns}
     </div>
   );
