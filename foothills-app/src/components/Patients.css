@@ -27,3 +27,35 @@
   padding: 5px;
   margin: 5px;
 }
+
+.patientAppointmentContainer {
+  border-radius: 8px;
+  margin: 20px;
+  text-align: center;
+  background: #6CB4EE;
+  color: white;
+  font-size: 30px;
+  font-weight: 100px;
+  font-style: italic;
+  height: 100%;
+}
+
+.appointmentTitle {
+  color: white;
+  background-color: #6CB4EE;
+  padding: 5px;
+  margin: 5px;
+}
+
+.appointmentList {
+  background-color: #6CB4EE;
+  padding: 5px;
+  margin: 5px;
+}
+
+.appointmentButton {
+  color: white;
+  background-color: #6CB4EE;
+  padding: 5px;
+  margin: 5px;
+}
