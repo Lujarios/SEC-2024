@@ -19,10 +19,12 @@ function Header() {
     };
 
     const navigate = useNavigate();
+
     const handleButtonClick = () => {
         var inputID = document.getElementById("id-input-field").value;
         fetchPatientIds();
         for (const id in patientIds) {
+            console.log(id);
             if (inputID == id) {
                 navigate("/Patient", { state: { key: id } });
                 return
