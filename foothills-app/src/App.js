@@ -11,7 +11,7 @@ function App() {
   const [patients, setPatients] = useState([]);
   const [doctors, setDoctors] = useState([]);
   const [appointments, setAppointments] = useState([]);
-  /*
+
   // Fetch all patients
   const fetchPatients = async () => {
     try {
@@ -116,10 +116,11 @@ function App() {
 
   // Fetch data when the component mounts
   useEffect(() => {
-    //fetchPatients();
+    fetchPatients();
     //fetchDoctors();
     //fetchAppointments();
   }, []);
+  console.log(patients);
 
   return (
     <Router>
