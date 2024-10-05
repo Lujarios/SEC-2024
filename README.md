@@ -71,6 +71,9 @@ npm start
 The user can enter the user ID of a patient at the top.
 
 Then the patient's information gets loaded into the boxes (their name and phone number).
+
+![image](https://github.com/user-attachments/assets/4d8551c9-9f63-4c49-a2dd-a6634d23f42e)
+
 From there then the user can press "add appointment" to pull up a new page to where the appointment can be scheduled with a specific docter, date, and time.
 
 ## <ins>**Not currently working**</ins> :frowning_face:
@@ -80,3 +83,4 @@ As of right now we have:
 - That initial unput user ID page loading (screenshot above)
 - Fetch information from the database (the .json files loading in the console of the application)
 - Send queries for specific Doctors specialties and get the return values
+- Display the current doctors by specialty
