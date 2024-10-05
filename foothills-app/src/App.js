@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home';
+import Error from './components/Error';
 import Patient from './components/Patient';
 import './App.css';
 import React, { useEffect, useState } from 'react';
@@ -126,6 +127,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="Error" element={<Error />} />
           <Route path="Patient" element={<Patient />} />
           <Route path="Specialists" element={<Patient />} />
         </Route>
