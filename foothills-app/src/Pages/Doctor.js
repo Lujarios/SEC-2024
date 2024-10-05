@@ -13,7 +13,7 @@ function Doctor() {
         changeDoctorID(history.state);
     }, [location]);
 
-    let doctor = []; //Doctor json from database
+    let doctor = ["SELECT * FROM Doctors WHERE doctor_id=(input)"]; //Doctor json from database
 
     return(
         <div>

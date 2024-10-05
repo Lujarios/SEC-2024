@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const specialityDropdown = (props) => { //props should be the speciality
     const [isOpen, setIsOpen] = useState(false);
-    const doctorInformation = []; //fill with SQL command about each doctor with given speciality
+    const doctorInformation = "SELECT * FROM DOCTORS WHERE SPECIALTY IS (input)"; //fill with SQL command about each doctor with given speciality
     const navigate = useNavigate();
 
     return(

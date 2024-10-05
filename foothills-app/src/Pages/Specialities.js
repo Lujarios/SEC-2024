@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import './Specialities.css';
-import React, { useState } from 'react';
+import React from 'react';
 
-function Book() {
-    let specialties = []; //Select all specialities from doctors
+function Specialities() {
+    let specialties = ["SELECT DISTINCT specialty FROM Doctors"]; //Select all specialities from doctors
     const speciality_dropdowns = specialties.map((speciality) =>
         <specialityDropdown name={speciality} />
     );
@@ -15,4 +14,4 @@ function Book() {
   );
 }
 
-export default Book;
+export default Specialities;
