@@ -1,14 +1,13 @@
 // App.js
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './Layout';
-import Home from './Home';
-import About from './About';
-import Contact from './Contact';
+import Layout from './components/Layout';
+import Home from './components/Home';
+import Patient from './components/Patient';
 import './App.css';
 import React, { useEffect, useState } from 'react';
 
 function App() {
+  /*
   const [patients, setPatients] = useState([]);
   const [doctors, setDoctors] = useState([]);
   const [appointments, setAppointments] = useState([]);
@@ -30,14 +29,13 @@ function App() {
 
     fetchData();
   }, []);
-
+*/
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/Patient" element={<Patient />} />
         </Route>
       </Routes>
     </Router>
