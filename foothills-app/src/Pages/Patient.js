@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Patients.css'
 import '../App.js'
 
-function Patient() {
+function Patient(props) {
     const [patient, setPatient] = useState([]);
     const [appointments, setAppointments] = useState([]);
 
     const navigate = useNavigate();
+    const location = useLocation();
+    const { key: id } = location.state;
+
     const handleButtonClick = (route) => {
         navigate(route);
     }
@@ -33,15 +36,15 @@ function Patient() {
     };
 
     useEffect(() => { //HARDCODED ATM
-        fetchPatientById(2); 
-        fetchAppointmentsById(2);
-    }, []);
+        fetchPatientById(id); 
+        fetchAppointmentsById(id);
+    }, [id]);
 
     return (
         <div className='mainContainer'>
             <div className='patientInfoContainer'>
-                <p className="patientName">Name: {patient.name}</p>
-                <p className="patientPhoneNumber">Phone Number: {patient.contact}</p>
+                <p className="patientName">Name: {patient ? patient.name : 'No patient found'}</p>
+                <p className="patientPhoneNumber">Phone Number: {patient ? patient.contact : 'No patient contact found'}</p>
             </div>
 
             <div className="patientAppointmentContainer">

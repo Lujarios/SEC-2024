@@ -5,7 +5,6 @@ import "./Header.css"
 
 
 function Header() {
-
     const [patientIds, setPatientIds] = useState([]);
     // Fetch all patient IDs
     const fetchPatientIds = async () => {
@@ -24,7 +23,6 @@ function Header() {
         var inputID = document.getElementById("id-input-field").value;
         fetchPatientIds();
         for (const id in patientIds) {
-            console.log(id);
             if (inputID == id) {
                 navigate("/Patient", { state: { key: id } });
                 return
