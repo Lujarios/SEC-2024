@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home';
 import Error from './components/Error';
-import Patient from './components/Patient';
+import Patient from './Pages/Patient';
 import Specialties from './Pages/Specialities';
 import './App.css';
 import React, { useEffect, useState } from 'react';
@@ -122,7 +122,6 @@ function App() {
     fetchDoctors();
     fetchAppointments();
   }, []);
-  console.log(patients);
 
   return (
     <Router>

@@ -163,6 +163,18 @@ app.get('/api/patients/:patientId', async (req, res) => {
 	}
 });
 
+// Get appointments by patient ID
+app.get('/api/appointments/:patientId', async (req, res) => {
+	const { patientId } = req.params;
+	try {
+		const result = await pool.query('SELECT * FROM appointments WHERE patient_id = $1', [patientId]);
+		res.json(result.rows);
+	} catch (err) {
+		console.error(err);
+		res.status(500).json({ error: 'Database error' });
+	}
+});
+
 // Start the server
 app.listen(port, () => {
 	console.log(`Server is running on http://localhost:${port}`);
