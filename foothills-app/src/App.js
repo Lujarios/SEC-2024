@@ -4,7 +4,7 @@ import Layout from './components/Layout';
 import Home from './components/Home';
 import Error from './components/Error';
 import Patient from './Pages/Patient';
-import Specialties from './Pages/Specialities';
+import Specialties from './Pages/Specialties';
 import './App.css';
 import React, { useEffect, useState } from 'react';
 
