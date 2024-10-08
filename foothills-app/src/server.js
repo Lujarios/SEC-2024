@@ -127,6 +127,17 @@ app.get('/api/patientIds', async (req, res) => {
 	}
 });
 
+// Get all specialties
+app.get('api/doctors/specialty', async(req, res) => {
+	try{
+		const result = await pool.query('SELECT DISTINCT specialty FROM doctors')
+		res.json(result.rows);
+	} catch (err) {
+		console.error(err);
+		res.status(500).json({error: 'Database error' });
+	}
+});
+
 // Get doctors by specialty
 app.get('/api/doctors/specialty/:specialty', async (req, res) => {
 	const { specialty } = req.params;
